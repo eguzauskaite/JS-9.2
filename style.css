@@ -1,0 +1,33 @@
+/* 2 užduotis
+* Išbandome ekraną. Sukurkite mygtuką su HTML. JS 
+pasirašykite, kad mygtukas position: absolute ir jo lokacija - viršus, kairė. Paspaudus ant mygtuko, jis turi peršokti į apačią dešinę pusę. Paspaudus vėl - į viršų, kairę pusę. Ir taip šokinėti įstrižai per ekraną kiekvieno paspaudimo metu.
+* Pakoreguokite sprendimą, kad mygtukas suktųsi ratu - laikrodžio rodykle. */
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+button {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background: #CD5C5C;
+    color: #8B0000;
+    border-radius: 5px;
+    border-top: #8B0000;
+    border-bottom: #8B0000;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center center; #
+    /* sukimosi taskas */
+}
+#mygtukas.clicked {
+    transform: rotate(360deg);
+}
